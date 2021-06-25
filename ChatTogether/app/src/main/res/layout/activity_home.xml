@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="#FFFFFF"
+            android:theme="@style/Widget.MaterialComponents.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/avatar"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:padding="5dp"
+                   android:layout_gravity="center"
+                   android:src="@drawable/ic_launcher_background"
+                   app:civ_border_color="#FBD1D1"
+                   app:civ_border_width="1dp" />
+
+               <TextView
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:gravity="left|center"
+                android:text="Chat Together"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                   android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:id="@+id/ic_setting"
+                   android:layout_marginHorizontal="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_setting" />
+           </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIconTint="#FF7C09"
+        app:tabIconTintMode="src_atop"
+        app:tabTextColor="#000000"
+        app:tabIndicatorColor="#F63F11"
+        app:tabSelectedTextColor="#0022FA"
+        android:elevation="10dp">
+    </com.google.android.material.tabs.TabLayout>
+
+
+
+</LinearLayout>
